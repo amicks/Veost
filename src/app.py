@@ -1,0 +1,27 @@
+from src import api, app, db
+from flask import abort
+from os import getenv
+
+def setup_app():
+    db_uri = getenv('SQLALCHEMY_DATABASE_URI')
+    if db_uri:
+        app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
+    else:
+        abort(401)
+
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+def setup_api(application):
+    with application.app_context():
+        api.init_app(application)
+
+def setup_db(application, sqlalchemy_bind):
+    with application.app_context():
+        sqlalchemy_bind.init_app(application)
+        sqlalchemy_bind.create_all()
+
+if __name__=='__main__':
+    setup_app()
+    setup_api(app)
+    setup_db(app, db)
+    app.run(debug=True)
