@@ -14,8 +14,9 @@ USERNAME=''
 PASSWORD=''
 HOST='localhost'
 PORT='5433'
-DB=''
+DB=./private/store.db
 
 export PYTHONPATH=:${PWD}
-export SQLALCHEMY_DATABASE_URI='postgresql://${USERNAME}:${PASSWORD}@${HOST}:${PORT}/${DB}'
+export SQLALCHEMY_DATABASE_URI='sqlite:////${DB}'
+#export SQLALCHEMY_DATABASE_URI='postgresql://${USERNAME}:${PASSWORD}@${HOST}:${PORT}/${DB}'
 
