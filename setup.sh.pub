@@ -1,11 +1,19 @@
 #!/bin/bash
 
+export PYTHONPATH=:${PWD}
+
 ###############################
 # Python Package Installation #
 ###############################
 cat packages.txt | while read line; do
     pip3 install $line
 done
+
+###########
+# OpenTok #
+###########
+export OT_API_KEY=''
+export OT_API_SECRET=''
 
 ##################
 # Database setup #
@@ -16,7 +24,5 @@ HOST='localhost'
 PORT='5433'
 DB=./private/store.db
 
-export PYTHONPATH=:${PWD}
-export SQLALCHEMY_DATABASE_URI='sqlite:////${DB}'
+#export SQLALCHEMY_DATABASE_URI='sqlite:////${DB}'
 #export SQLALCHEMY_DATABASE_URI='postgresql://${USERNAME}:${PASSWORD}@${HOST}:${PORT}/${DB}'
-

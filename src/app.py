@@ -1,6 +1,7 @@
-from src import api, app, db
 from flask import abort
 from os import getenv
+from src import api, app, db
+from src.events import *
 
 def setup_app():
     db_uri = getenv('SQLALCHEMY_DATABASE_URI')
