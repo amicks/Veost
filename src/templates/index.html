@@ -7,11 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
-  <script type = "text/javascript">
-    var apiKey = '{{ api_key }}';
-    var sessionId = '{{ session-id }}';
-    var token = '{{ token }}';
-  </script>
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -19,7 +14,6 @@
       color: #f5f6f7;
   }
   p {font-size: 16px;}
-  
   hr {
     display: block;
     height: 1px;
@@ -59,13 +53,13 @@
     background-color: #ef2f39;
   }
 
-  .btn-primary:hover {
+  .btn-primary:hover, .btn-primary:focus:hover, .btn-primary:focus {
     transition: all 0.5s;
     border-color: #000000;
     background-color: #a2ceef;
   }
 
-  .btn-success:hover {
+  .btn-success:hover, .btn-success:focus:hover, .btn-success:focus {
     transition: all 0.5s;
     border-color: #000000;
     background-color: #ff694f;
