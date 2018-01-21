@@ -26,3 +26,12 @@ body, html {
     border: 3px solid white;
     border-radius: 3px;
 }
+#history {
+    position: absolute;
+    right:10;
+    bottom:30;
+    width:500px;
+    height: 100%;
+    border: 3px solid white;
+    border-radius: 3px;
+}
