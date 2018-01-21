@@ -1,7 +1,5 @@
-from flask_restful import Resource
 from opentok import MediaModes
-from os import getenv
-from src import api, ot
+from src import ot
 from src.store import roasters, venters
 
 def pair_users(queue):
