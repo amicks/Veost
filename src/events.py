@@ -1,22 +1,22 @@
 from opentok import MediaModes
 from os import getenv
 from src import ot
-from src.store import listeners, venters
+from src.store import roasters, venters
 
-def create_session_token(queue1, queue2):
-    if queue2:
-        sesh = queue2.pop(0)
+def pair_from_queue(q):
+    if q:
+        sesh = q.pop(0)
     else:
         s = ot.create_session(media_mode=MediaModes.routed)
         sesh = {
             'id': s.session_id,
             'token': s.generate_token()
         }
-        queue1.append(sesh)
+        q.append(sesh)
     return sesh
 
 def new_venter():
-    return create_session_token(venters, listeners)
+    return pair_from_queue(venters)
 
-def new_listener():
-    return create_session_token(listeners, venters)
+def new_roaster():
+    return pair_from_queue(roasters)
