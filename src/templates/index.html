@@ -6,174 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  body {
-      font: 20px Montserrat, sans-serif;
-      line-height: 1.8;
-      color: #f5f6f7;
-  }
-  p { font-size: 16px; }
-  hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    width: 60%;
-  }
-  .margin {margin-bottom: 45px;}
-  .bg-1 {
-      background-color: #cecece; /* Light Gray */
-      color: #ffffff;
-  }
-  .bg-2 {
-      background-color: #f2f2f2; /* White */
-      color: #555555;
-  }
-  .bg-3 {
-      background-color: #2f2f2f; /* Black Gray */
-      color: #fff;
-  }
-  .btn {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 30px;
-    height: 120px;
-    width: 300px;
-    border: solid 2px;
-    border-radius: 12px;
-    border-color: #000000;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
-    text-shadow: 2px 2px gray;
-  }
-  .btn-primary {
-    background-color: #75c3ff;
-  }
-  .btn-success {
-    background-color: #ef2f39;
-  }
-
-  .btn-primary:hover, .btn-primary:focus:hover, .btn-primary:focus, .btn-primary:active, .btn-primary:active:focus, .btn-primary.active {
-    transition: all 0.5s;
-    border-color: #000000;
-    background-color: #a2ceef;
-  }
-
-  .btn-success:hover, .btn-success:focus:hover, .btn-success:focus, .btn-success:active, .btn-success:active:focus, .btn-success.active {
-    transition: all 0.5s;
-    border-color: #000000;
-    background-color: #ff694f;
-  }
-  .container-fluid {
-      padding-top: 150px;
-      padding-bottom: 500px;
-  }
-  .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border: 0;
-      border-radius: 0;
-      margin-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-      color: #1abc9c !important;
-  }
-
-  .letter {
-    padding-top: 200px;
-    font-size: 40px;
-    text-shadow: 0px 0px 3px;
-  }
-
-  .letter:nth-child(1) {
-    animation: fade 3s infinite 100ms;
-  }
-
-  .letter:nth-child(2) {
-    animation: fade 3s infinite 200ms;
-  }
-
-  .letter:nth-child(3) {
-    animation: fade 3s infinite 300ms;
-  }
-
-  .letter:nth-child(4) {
-    animation: fade 3s infinite 400ms;
-  }
-
-  .letter:nth-child(5) {
-    animation: fade 3s infinite 500ms;
-  }
-
-  .letter:nth-child(6) {
-    animation: fade 3s infinite 600ms;
-  }
-
-  .letter:nth-child(7) {
-    animation: fade 3s infinite 700ms;
-  }
-
-  .letter:nth-child(8) {
-    animation: fade 3s infinite 800ms;
-  }
-
-  .letter:nth-child(9) {
-    animation: fade 3s infinite 900ms;
-  }
-
-  .letter:nth-child(10) {
-    animation: fade 3s infinite 1000ms;
-  }
-
-  .letter:nth-child(11) {
-    animation: fade 3s infinite 1100ms;
-  }
-
-  .letter:nth-child(12) {
-    animation: fade 3s infinite 1200ms;
-  }
-
-  .letter:nth-child(13) {
-    animation: fade 3s infinite 1300ms;
-  }
-
-  .letter:nth-child(14) {
-    animation: fade 3s infinite 1400ms;
-  }
-
-  .letter:nth-child(15) {
-    animation: fade 3s infinite 1500ms;
-  }
-
-  .letter:nth-child(16) {
-    animation: fade 3s infinite 1600ms;
-  }
-
-  .letter:nth-child(17) {
-    animation: fade 3s infinite 1700ms;
-  }
-
-  .letter:nth-child(18) {
-    animation: fade 3s infinite 1800ms;
-  }
-
-  .letter:nth-child(19) {
-    animation: fade 3s infinite 1900ms;
-  }
-
-  .letter:nth-child(20) {
-    animation: fade 3s infinite 2000ms;
-  }
-
-  @keyframes fade {
-    10% {
-      opacity: 0.1;
-    }
-  }
-
-  </style>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -184,14 +18,14 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
       </button>
       <a class="navbar-brand" href="#">VENT</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/">HOME</a></li>
-        <li><a href="about">ABOUT</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
       </ul>
     </div>
   </div>
@@ -223,13 +57,12 @@
 
   <hr width=40%>
 
-  <form action="/new_session" method="POST">
-    <button class="btn btn-primary" name="button" value="vent">vent</button>
+  <button class="btn btn-primary">vent</button>
 
-    &nbsp; &nbsp;
+  &nbsp; &nbsp;
 
-    <button class="btn btn-success" name="button" value="roast">roast</button>
-  </form>
+  <button class="btn btn-success">roast</button>
+
 </div>
 
 </body>
