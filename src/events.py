@@ -1,22 +1,23 @@
+from flask_restful import Resource
 from opentok import MediaModes
 from os import getenv
-from src import ot
+from src import api, ot
 from src.store import roasters, venters
 
-def pair_from_queue(q):
-    if q:
-        sesh = q.pop(0)
+def pair_users(queue):
+    if queue:
+        sesh = queue.pop(0)
     else:
         s = ot.create_session(media_mode=MediaModes.routed)
         sesh = {
             'id': s.session_id,
             'token': s.generate_token()
         }
-        q.append(sesh)
+        queue.append(sesh)
     return sesh
 
 def new_venter():
-    return pair_from_queue(venters)
+    return pair_users(venters)
 
 def new_roaster():
-    return pair_from_queue(roasters)
+    return pair_users(roasters)

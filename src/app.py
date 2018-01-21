@@ -1,46 +1,27 @@
-from flask import abort, jsonify
+from flask import abort, jsonify, render_template, request
 from os import getenv
-from src import api, app, db
-from src.events import pair_from_queue, new_roaster, new_venter
-
-def setup_app():
-    db_uri = getenv('SQLALCHEMY_DATABASE_URI')
-    if db_uri:
-        app.config['SQLALCHEMY_DATABASE_URI'] = db_uri
-    else:
-        abort(401)
-
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+from src import api, app
+from src.events import new_roaster, new_venter
 
 def setup_api(application):
     with application.app_context():
         api.init_app(application)
 
-def setup_db(application, sqlalchemy_bind):
-    with application.app_context():
-        sqlalchemy_bind.init_app(application)
-        sqlalchemy_bind.create_all()
-
 @app.route('/')
-def landing_page():
-    return 'foo'
+def index():
+    return render_template('index.html')
 
-@app.route("/vent")
-def tok():
-    key = api_key
-    session_id = session.session_id
-    token = opentok.generate_token(session_id)
-    return render_template('vent.html', api_key=key, session_id=session_id, token=token)
+@app.route('/new_session', methods=["POST"])
+def new_session():
+    if request.form.get('button') == 'vent':
+        sesh = new_venter()
+    elif request.form.get('button') == 'roast':
+        sesh = new_roaster()
 
-@app.route("/roast")
-def tok():
-    key = api_key
-    session_id = session.session_id
-    token = opentok.generate_token(session_id)
-    return render_template('roast.html', api_key=key, session_id=session_id, token=token)
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__=='__main__':
-    setup_app()
     setup_api(app)
-    setup_db(app, db)
     app.run(debug=True)
