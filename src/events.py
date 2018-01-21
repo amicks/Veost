@@ -10,7 +10,7 @@ TOKEN_IDX = 1
 
 def create_session_token(queue1, queue2):
     if queue2:
-        sesh = listeners.pop(0)
+        sesh = queue2.pop(0)
     else:
         s = ot.create_session(media_mode=MediaModes.routed)
         sesh = {
