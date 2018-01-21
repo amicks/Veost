@@ -7,7 +7,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main_nav.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Raleway+Dots" rel="stylesheet" type="text/css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -32,7 +34,7 @@
 </nav>
 
 
-<div class="container-fluid bg-2 text-center" style="padding-top: 75px;">
+<div class="container-fluid bg-2 text-center" style="padding-top: 75px; padding-bottom: 125px">
     <h2>WHAT IS VENT?</h2>
 
     <hr>
@@ -51,5 +53,46 @@
 		<p>3) And that's it. You're all set to Vent or Roast.
 
 </div>
+
+<!-- Footer -->
+<section>
+  <ul id="services">
+    <h2>Follow Us</h2>
+    <li>
+      <div class="facebook">
+        <a href="https://facebook.com">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Facebook</span>
+    </li>
+    <li>
+      <div class="twitter">
+        <a href="https://twitter.com">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Twitter</span>
+    </li>
+
+    <li>
+      <div class="instagram">
+        <a href="https://www.linkedin.com">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Instagram</span>
+    </li>
+    <li>
+      <div class="github">
+        <a href="https://github.com">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      </div>
+      <span>Github</span>
+    </li>
+  </ul>
+</section>
+
 </body>
 </html>
