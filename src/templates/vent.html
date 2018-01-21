@@ -3,7 +3,7 @@
 
 <head>
     <title> Vent test video </title>
-    <link href="app.css" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='app.css') }}" rel="stylesheet" type="text/css">
 
     <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
 
@@ -32,7 +32,7 @@
       console.log(token)
       console.log(apiKey)
     </script>
-    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 
 </html>
