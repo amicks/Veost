@@ -25,6 +25,20 @@ def setup_db(application, sqlalchemy_bind):
 def landing_page():
     return 'foo'
 
+@app.route("/vent")
+def tok():
+    key = api_key
+    session_id = session.session_id
+    token = opentok.generate_token(session_id)
+    return render_template('vent.html', api_key=key, session_id=session_id, token=token)
+
+@app.route("/roast")
+def tok():
+    key = api_key
+    session_id = session.session_id
+    token = opentok.generate_token(session_id)
+    return render_template('roast.html', api_key=key, session_id=session_id, token=token)
+
 if __name__=='__main__':
     setup_app()
     setup_api(app)
