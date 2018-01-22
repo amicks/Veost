@@ -29,11 +29,15 @@ session.on({
     document.getElementById('subscriber').appendChild(subContainer);
 
     // Subscribe to the stream that caused this event, put it inside the container we just made
+    var options = {width: '1000', height: '100%'}
+    session.subscribe(event.stream, subContainer, options);
+    /*
     session.subscribe(event.stream, subContainer, function(error) {
       if (error) {
         console.error('Failed to subscribe', error);
       }
     });
+    */
   }
 
 });
