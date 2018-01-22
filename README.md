@@ -20,4 +20,4 @@ CSS of Tokbox video components for clean UI.
 Chatbox when audio and video unnecessary.
 
 ## Created By
-Robert Loquinario, Kevin Lim, Khang Tran, and Allston Mickey at CruzHacks 2018.  Received an honorable mention for "Keeping It Weird" challenge.
+[Robert Loquinario](https://github.com/lokinario), [Kevin Lim](https://github.com/oohklim), Khang Tran, and [Allston Mickey](https://github.com/amicks) at CruzHacks 2018.  Received an honorable mention for "Keeping It Weird" challenge.
